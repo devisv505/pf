@@ -6,6 +6,7 @@ import {cn} from "@/lib/utils";
 // import {useConvexAuth} from "convex/react";
 // import {SignInButton, UserButton} from "@clerk/clerk-react";
 import {Logo} from "@/components/logo";
+import SignInButton from "@/components/signIn-button";
 
 export const Navbar = () => {
     // const {isAuthenticated, isLoading} = useConvexAuth();
@@ -18,6 +19,7 @@ export const Navbar = () => {
         )}>
             <Logo/>
             <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
+                <SignInButton />
                 {/*{isLoading && (*/}
                 {/*    <Spinner />*/}
                 {/*)}*/}

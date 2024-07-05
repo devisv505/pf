@@ -64,7 +64,7 @@ const SignInButton = () => {
             onClick={() => signIn()}
         >
             <LogInIcon className="w-4 h-4 mr-2"/>
-            Вход
+            Войти
         </Button>
     )
 }

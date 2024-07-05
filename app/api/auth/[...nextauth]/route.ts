@@ -22,8 +22,7 @@ const handler = NextAuthOptions({
             return baseUrl
         },
         async session({session, user, token}) {
-            // @ts-ignore
-            session!!.user!!.id = user.id;
+            // session!!.user!!.id = user.id;
             console.log(session)
 
             return session

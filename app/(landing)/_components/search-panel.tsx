@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {cn} from "@/lib/utils";

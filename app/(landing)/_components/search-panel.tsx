@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import Image from "next/image";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
@@ -12,11 +12,9 @@ import {format} from "date-fns";
 import {ru} from "date-fns/locale";
 import {Calendar} from "@/components/ui/calendar";
 import React, {useState} from "react";
-import {useMediaQuery} from "usehooks-ts";
 
 const SearchPanel = () => {
     const [date, setDate] = useState<Date>()
-    const isMobile = useMediaQuery("(max-width: 768px)");
 
     return (
         <div className="relative w-full h-[85vh] group">
@@ -32,26 +30,17 @@ const SearchPanel = () => {
 
                     </CardHeader>
                     <CardContent>
-                        <div className={cn(
-                            isMobile && "block text-start",
-                            !isMobile && "flex gap-x-2 items-start justify-start text-start"
-                        )}>
+                        <div className="block md:flex gap-x-2 items-start justify-start text-start">
                             <div className="grid w-full max-w-sm items-center gap-1.5">
                                 <Label htmlFor="type">Я ищу</Label>
                                 <Input type="type" id="type" placeholder="Музыканта"/>
                             </div>
-                            <div className={cn(
-                                "grid w-full max-w-sm items-center gap-1.5",
-                                isMobile && "pt-4"
-                            )}>
+                            <div className="grid w-full max-w-sm items-center gap-1.5 pt-4 md:pt-0">
                                 <Label htmlFor="city">для мероприятия в</Label>
                                 <Input className="outline-none focus:utline-none" type="city" id="city"
                                        placeholder="Городе"/>
                             </div>
-                            <div className={cn(
-                                "grid w-full max-w-sm items-center gap-1.5",
-                                isMobile && "pt-4"
-                            )}>
+                            <div className="grid w-full max-w-sm items-center gap-1.5 pt-4 md:pt-0">
                                 <Label htmlFor="email">на</Label>
                                 <Popover>
                                     <PopoverTrigger asChild>
